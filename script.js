@@ -1,4 +1,4 @@
-/*let descriptionShowing = false;
+let descriptionShowing = false;
 
 const squares = document.querySelectorAll('.square');
 const descriptions = document.querySelectorAll('.description')
@@ -18,4 +18,3 @@ descriptions.forEach((description) => {
         description.classList.remove('show') // reset the flag
     });
 });
-*/
