@@ -1,4 +1,4 @@
-let descriptionShowing = false;
+/*let descriptionShowing = false;
 
 const squares = document.querySelectorAll('.square');
 const descriptions = document.querySelectorAll('.description')
