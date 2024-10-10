@@ -1,7 +1,7 @@
 let descriptionShowing = false;
 
 const squares = document.querySelectorAll('.square');
-const descriptions = document.querySelectorAll('.description')
+const descriptions = document.querySelectorAll('.description');
 
 squares.forEach((square) => {
   square.addEventListener('click', () => {
@@ -15,6 +15,7 @@ squares.forEach((square) => {
 
 descriptions.forEach((description) => {
     description.addEventListener('click', () => {
-        description.classList.remove('show') // reset the flag
+        description.classList.remove('show');
+        descriptionShowing = false;
     });
 });
