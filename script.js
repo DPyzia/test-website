@@ -18,3 +18,4 @@ descriptions.forEach((description) => {
         description.classList.remove('show') // reset the flag
     });
 });
+*/
