@@ -15,6 +15,6 @@ squares.forEach((square) => {
 
 descriptions.forEach((description) => {
     description.addEventListener('click', () => {
-        description.classList = false; // reset the flag
+        description.classList.toggle('hide') // reset the flag
     });
 });
