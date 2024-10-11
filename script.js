@@ -5,7 +5,7 @@ const descriptions = document.querySelectorAll('.description');
 
 squares.forEach(function (el) {
   el.addEventListener('click', function (e) {
-    if (descriptionShowing) return
+    if (descriptionShowing) return;
 
     el.nextElementSibling.style.display = 'block';
     descriptionShowing = !descriptionShowing;
@@ -15,6 +15,7 @@ squares.forEach(function (el) {
 descriptions.forEach(function (el) {
   el.addEventListener('click', function (e) {
     el.style.display = 'none';
+    el.nextElementSibling.style.display = 'none';
     descriptionShowing = false;
   })
 });
