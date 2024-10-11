@@ -12,7 +12,7 @@ squares.forEach(function (el) {
   })
 });
 
-close.forEach(function (el) {
+descriptions.forEach(function (el) {
   el.addEventListener('click', function (e) {
     el.style.display = 'none';
     descriptionShowing = false;
