@@ -1,21 +1,14 @@
-let descriptionShowing = false;
-
+// Select all square elements
 const squares = document.querySelectorAll('.square');
-const descriptions = document.querySelectorAll('.description');
 
+// Add an event listener to each square element
 squares.forEach((square) => {
   square.addEventListener('click', () => {
-    if (descriptionShowing) return; // prevent clicking on other squares
-
-    const description = square.nextElementSibling;
-    description.classList.toggle('show');
-    descriptionShowing = !descriptionShowing; // toggle the flag
-  });
-});
-
-descriptions.forEach((description) => {
+    // Toggle the visibility of the description
+    const description = square.querySelector('.description');
+    description.classList.toggle('visible');
     description.addEventListener('click', () => {
-        description.classList.remove('show');
-        descriptionShowing = false;
+      description.classList.remove('visible');
     });
+  });
 });
