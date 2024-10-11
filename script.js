@@ -1,14 +1,21 @@
-// Select all square elements
-const squares = document.querySelectorAll('.square');
+let descriptionShowing = false;
 
-// Add an event listener to each square element
+const squares = document.querySelectorAll('.square');
+const descriptions = square.querySelectorAll('.description');
+
 squares.forEach((square) => {
   square.addEventListener('click', () => {
-    // Toggle the visibility of the description
-    const description = square.querySelector('.description');
-    description.classList.toggle('visible');
-    description.addEventListener('click', () => {
-      description.classList.remove('visible');
-    });
+    if (descriptionShowing) return; // prevent clicking on other squares
+
+//    const description = square.nextElementSibling;
+    description.classList.toggle('visable');
+    descriptionShowing = !descriptionShowing; // toggle the flag
   });
+});
+
+descriptions.forEach((description) => {
+    description.addEventListener('click', () => {
+        description.classList.remove('visable');
+        descriptionShowing = false;
+    });
 });
