@@ -16,7 +16,6 @@ squares.forEach(function (el) {
 close.forEach(function (el) {
   el.addEventListener('click', function (e) {
     el.style.display = 'none';
-    el.descriptions.style.display = 'none';
     descriptionShowing = false;
   })
 });
