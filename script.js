@@ -1,18 +1,21 @@
+let descriptionShowing = false;
+
 const squares = document.querySelectorAll('.square');
 const descriptions = document.querySelectorAll('.description');
-const body = document.body;
+const bodies = document.body;
 
-squares.forEach(function(square) {
-  square.addEventListener('click', function(e) {
-    const description = square.nextElementSibling;
-    description.style.display = description.style.display === 'block' ? 'none' : 'block';
+squares.forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    if (descriptionShowing) return;
+
+    el.nextElementSibling.style.display = 'block';
+    descriptionShowing = !descriptionShowing;
   })
 });
 
-body.addEventListener('click', function(e) {
-  if (!e.target.classList.contains('description')) {
-    descriptions.forEach(function(description) {
-      description.style.display = 'none';
-    });
-  }
+bodies.forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    el.style.display = 'none';
+    descriptionShowing = false;
+  })
 });
