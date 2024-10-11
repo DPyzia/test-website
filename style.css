@@ -37,6 +37,6 @@ body {
   z-index: 1;
 }
 
-.description.show {
+.description.visable {
   display: block;
 }
