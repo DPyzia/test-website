@@ -1,25 +1,13 @@
-//let descriptionShowing = false;
-
 const squares = document.querySelectorAll('.square');
 const descriptions = document.querySelectorAll('.description');
 const body = document.body;
 
-squares.forEach(function (el) {
-  el.addEventListener('click', function (e) {
-    //if (descriptionShowing) return;
-
-    el.nextElementSibling.style.display = 'block';
-    //descriptionShowing = !descriptionShowing;
+squares.forEach(function(square) {
+  square.addEventListener('click', function(e) {
+    const description = square.nextElementSibling;
+    description.style.display = description.style.display === 'block' ? 'none' : 'block';
   })
 });
-
-/*descriptions.forEach(function (el) {
-  el.addEventListener('click', function (e) {
-    el.style.display = 'none';
-    descriptionShowing = false;
-  })
-});
-*/
 
 body.addEventListener('click', function(e) {
   if (!e.target.classList.contains('description')) {
