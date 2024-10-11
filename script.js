@@ -15,7 +15,6 @@ squares.forEach(function (el) {
 descriptions.forEach(function (el) {
   el.addEventListener('click', function (e) {
     el.style.display = 'none';
-    el.nextElementSibling.style.display = 'none';
     descriptionShowing = false;
   })
 });
