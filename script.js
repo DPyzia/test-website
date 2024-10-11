@@ -2,7 +2,6 @@ let descriptionShowing = false;
 
 const squares = document.querySelectorAll('.square');
 const descriptions = document.querySelectorAll('.description');
-const close = document.querySelectorAll('.close');
 
 squares.forEach(function (el) {
   el.addEventListener('click', function (e) {
