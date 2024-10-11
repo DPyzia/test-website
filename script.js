@@ -1,9 +1,14 @@
 const squares = document.querySelectorAll('.square');
+const descriptions = document.querySelectorAll('.description');
 
-if (e.target.classList.contains('square')) {
-  squares.forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      el.nextElementSibling.style.display = 'block';
-    })
+squares.forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    el.nextElementSibling.style.display = 'block';
   })
-};
+});
+
+descriptions.forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    el.nextElementSibling.style.display = 'none';
+  })
+});
