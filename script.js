@@ -1,10 +1,9 @@
-const squareContainer = document.querySelector('.square-container');
+const squares = document.querySelectorAll('.square');
 
-squareContainer.addEventListener('click', function(e) {
-  if (e.target.classList.contains('square')) {
-    const description = e.target.nextElementSibling;
-    description.style.display = description.style.display === 'block' ? 'none' : 'block';
-  } else if (e.target.classList.contains('description')) {
-    e.target.style.display = 'none';
-  }
-});
+if (e.target.classList.contains('square')) {
+  squares.forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      el.nextElementSibling.style.display = 'block';
+    })
+  })
+};
